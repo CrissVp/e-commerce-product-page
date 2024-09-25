@@ -30,13 +30,11 @@
 	background-color: hsla(var(--white), 75%);
 }
 
-.image_active {
-	&::after {
-		border: 2px solid hsl(var(--orange));
-	}
+.images_thumbnails .image_active::after {
+	display: block;
+	border: 2px solid hsl(var(--orange));
 }
 
-.image_active,
 .images_thumbnails button:hover {
 	&::after {
 		display: block;

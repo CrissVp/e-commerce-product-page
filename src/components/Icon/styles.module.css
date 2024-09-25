@@ -5,41 +5,41 @@
 }
 
 .icon--cart {
-	mask-image: url('icons/icon-cart.svg');
+	mask-image: url('/e-commerce-product-page/icons/icon-cart.svg');
 	background-color: hsl(var(--very-dark-blue));
 }
 
 .icon--plus {
-	mask-image: url('icons/icon-plus.svg');
+	mask-image: url('/e-commerce-product-page/icons/icon-plus.svg');
 	background-color: hsl(var(--orange));
 }
 
 .icon--minus {
-	mask-image: url('icons/icon-minus.svg');
+	mask-image: url('/e-commerce-product-page/icons/icon-minus.svg');
 	background-color: hsl(var(--orange));
 }
 
 .icon--close {
-  mask-image: url('icons/icon-close.svg');
+  mask-image: url('/e-commerce-product-page/icons/icon-close.svg');
 	background-color: hsl(var(--white));
 }
 
 .icon--previous {
-  mask-image: url('icons/icon-previous.svg');
+  mask-image: url('/e-commerce-product-page/icons/icon-previous.svg');
 	background-color: hsl(var(--dark-grayish-blue));
 }
 
 .icon--next {
-  mask-image: url('icons/icon-next.svg');
+  mask-image: url('/e-commerce-product-page/icons/icon-next.svg');
 	background-color: hsl(var(--dark-grayish-blue));
 }
 
 .icon--delete {
-	mask-image: url('icons/icon-delete.svg');
+	mask-image: url('/e-commerce-product-page/icons/icon-delete.svg');
 	background-color: hsl(var(--grayish-blue));
 }
 
 .icon--menu {
-	mask-image: url('icons/icon-menu.svg');
+	mask-image: url('/e-commerce-product-page/icons/icon-menu.svg');
 	background-color: hsl(var(--dark-grayish-blue));
 }
