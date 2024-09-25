@@ -1,0 +1,38 @@
+.menu_container {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background-color: hsla(var(--black), 75%);
+}
+
+.menu {
+  width: 0;
+  gap: 20px;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  padding: 40px 20px;
+  flex-direction: column;
+  animation: menu_size .6s ease forwards;
+  background-color: hsl(var(--white));
+}
+
+.menu a {
+  font-size: 20px;
+  font-weight: 700;
+  color: hsl(var(--very-dark-blue));
+}
+
+.menu button {
+  margin-bottom: 20px;
+
+  div {
+    background-color: hsl(var(--dark-grayish-blue));
+  }
+}
+
+@keyframes menu_size {
+  100% {
+    width: 70%;
+  }
+}

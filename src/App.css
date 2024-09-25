@@ -1,0 +1,15 @@
+.app_container {
+	width: 100%;
+	display: flex;
+	margin: 0 auto;
+	padding: 0 20px;
+	max-width: 840px;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+@media (max-width: 768px) {
+	.app_container {
+		padding: 0;
+	}
+}

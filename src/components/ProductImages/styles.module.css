@@ -1,0 +1,165 @@
+.images {
+	gap: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+.images_full img {
+	width: 100%;
+	cursor: pointer;
+	border-radius: 12px;
+}
+
+.images_thumbnails {
+	gap: 20px;
+	display: flex;
+}
+
+.images_thumbnails button {
+	height: 80px;
+	cursor: pointer;
+	position: relative;
+}
+
+.images_thumbnails button::after {
+	content: '';
+	inset: 0;
+	display: none;
+	position: absolute;
+	border-radius: 12px;
+	background-color: hsla(var(--white), 75%);
+}
+
+.image_active {
+	&::after {
+		border: 2px solid hsl(var(--orange));
+	}
+}
+
+.image_active,
+.images_thumbnails button:hover {
+	&::after {
+		display: block;
+	}
+}
+
+.images_thumbnails img {
+	height: 80px;
+	border-radius: 12px;
+}
+
+.images_lightbox {
+	position: fixed;
+	inset: 0;
+	z-index: 100;
+	display: grid;
+	place-content: center;
+	background-color: hsla(var(--black), 75%);
+}
+
+.lightbox_container {
+	gap: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+.lightbox_container > button {
+	align-self: flex-end;
+	position: relative;
+	cursor: pointer;
+	right: 8%;
+}
+
+.lightbox_container > button:hover {
+	div {
+		background-color: hsl(var(--grayish-blue));
+	}
+}
+
+.images_lightbox .images {
+	max-width: 450px;
+	overflow: hidden;
+	justify-content: center;
+}
+
+.images_lightbox .images_full {
+	display: flex;
+	align-items: center;
+	position: relative;
+
+	img {
+		cursor: default;
+	}
+}
+
+.arrow_button {
+	width: 40px;
+	height: 40px;
+	min-width: 40px;
+	display: none;
+	cursor: pointer;
+	border-radius: 50%;
+	position: relative;
+	place-content: center;
+	background-color: hsl(var(--white));
+}
+
+.lightbox_container .arrow_button {
+	display: grid;
+}
+
+.arrow_button:hover {
+	div {
+		background-color: hsl(var(--orange));
+	}
+}
+
+.arrow_button:first-child {
+	right: -4%;
+}
+
+.arrow_button:last-child {
+	left: -4%;
+}
+
+.images_lightbox .images_thumbnails {
+	justify-content: center;
+}
+
+@media (max-width: 768px) {
+	.images_full {
+		position: relative;
+	}
+
+	.images_full button:has(img),
+	.images_full button:has(img) img {
+		width: 100%;
+		height: 350px;
+		object-fit: cover;
+		border-radius: unset;
+		pointer-events: none;
+		object-position: center;
+	}
+
+	.arrow_button {
+		display: grid;
+		position: absolute;
+
+		&:first-child,
+		&:last-child {
+			top: calc(50% - 20px);
+		}
+
+		&:first-child {
+			left: 2%;
+		}
+
+		&:last-child {
+			left: calc(98% - 40px);
+		}
+	}
+
+	.images_thumbnails {
+		display: none;
+	}
+}

@@ -1,0 +1,129 @@
+.cart {
+	position: relative;
+}
+
+.cart > span {
+	position: absolute;
+	top: -4px;
+	right: -6px;
+	z-index: 10;
+	padding: 0 6px;
+	font-size: 10px;
+	font-weight: 700;
+	border-radius: 999px;
+	color: hsl(var(--white));
+	background-color: hsl(var(--orange));
+}
+
+.cart_icon div {
+	cursor: pointer;
+	background-color: hsl(var(--dark-grayish-blue));
+
+	&:hover {
+		background-color: hsl(var(--very-dark-blue));
+	}
+}
+
+.cart_box {
+	top: 150%;
+	z-index: 20;
+	right: -250%;
+	display: flex;
+	min-width: 300px;
+	min-height: 200px;
+	border-radius: 8px;
+	position: absolute;
+	flex-direction: column;
+	background-color: hsl(var(--white));
+	box-shadow: 0px 2px 10px 2px hsla(var(--black), 25%);
+}
+
+.cart_box h4 {
+	font-size: 18px;
+	padding: 20px;
+	color: hsl(var(--very-dark-blue));
+	border-bottom: 1px solid hsla(var(--grayish-blue), 40%);
+}
+
+.cart_box ul {
+	padding: 20px;
+	list-style: none;
+}
+
+.cart_box ul li {
+	gap: 20px;
+	display: flex;
+}
+
+.cart_image img {
+	width: 50px;
+	height: 50px;
+	border-radius: 6px;
+}
+
+.cart_details {
+	display: flex;
+	line-height: 1.6;
+	text-wrap: nowrap;
+	flex-direction: column;
+	color: hsl(var(--dark-grayish-blue));
+}
+
+.cart_details p strong {
+	color: hsl(var(--very-dark-blue));
+}
+
+.remove_button {
+	display: flex;
+	align-items: center;
+}
+
+.remove_button button:hover {
+	cursor: pointer;
+
+	div {
+		background-color: hsl(var(--very-dark-blue));
+	}
+}
+
+.checkout_button {
+	background-color: hsl(var(--orange));
+}
+
+.cart_box > button {
+	padding: 10px 0;
+	font-weight: 800;
+	cursor: pointer;
+	font-size: 14px;
+	border-radius: 8px;
+	margin: 0 20px 20px;
+	color: hsl(var(--very-dark-blue));
+}
+
+.cart_box > button:hover {
+	color: hsl(var(--dark-grayish-blue));
+	background-color: hsl(var(--pale-orange));
+}
+
+.empty_message {
+	flex: 1;
+	padding: 20px;
+	display: grid;
+	font-weight: 700;
+	text-wrap: nowrap;
+	place-content: center;
+	color: hsl(var(--dark-grayish-blue));
+}
+
+@media (max-width: 425px) {
+	.cart_box {
+		position: fixed;
+		top: 10%;
+		left: 2%;
+		right: 2%;
+	}
+
+	.cart_details {
+		text-wrap: wrap;
+	}
+}
